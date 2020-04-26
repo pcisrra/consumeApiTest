@@ -26,7 +26,9 @@ class PageOne extends StatelessWidget{
 
           return snapshot.hasData
             ? ContentView(data: snapshot.data)
-            : Center(child: CircularProgressIndicator());
+            : Center(child:
+              Text('${snapshot.error}'),
+            );
         },
       ),
 		);

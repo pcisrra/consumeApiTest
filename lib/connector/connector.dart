@@ -17,6 +17,11 @@ Future<List<Article>> getData(http.Client client) async{
 }
 
 List<Article> parseArticles(String bodyResponse){
-  final parsed = json.decode(bodyResponse).cast<Map<String, dynamic>>();
-  return parsed.map<Article>((json) => Article.fromJson(json)).toList();
+  final parsed = json.decode(bodyResponse);
+  List<Article> articles = [];
+  for(var obj in parsed){
+    Article art = Article.fromJson(obj);
+    articles.add(art);
+  }
+  return articles;
 }
