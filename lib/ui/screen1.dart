@@ -74,9 +74,9 @@ class ContentView extends StatelessWidget{
 											SizedBox(width: 5.0),
 										]),
 										SizedBox(height: 10.0),
-										Text(data[1].title),
+										Text(data[0].title),
 										SizedBox(height: 10.0),
-										Text(data[1].body)
+										Text(data[0].body)
 									],
 								),
 						  ),
