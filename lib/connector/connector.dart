@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 
-String serviceUrl = 'https://json-service-823df.web.app/api/articles';
+String serviceUrl = 'https://json-service-823df.web.app/api/articles/3';
 
 @override
 void initState(){
@@ -16,7 +16,7 @@ Future<List<Article>> getData(http.Client client) async{
 }
 
 List<Article> parseArticles(String bodyResponse){
-  final parsed = json.decode(bodyResponse);
+  final parsed = json.decode(bodyResponse)['articles'];
   List<Article> articles = [];
   for(var obj in parsed){
       Article art = Article.fromJson(obj);
