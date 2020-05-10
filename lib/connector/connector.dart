@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 
-String serviceUrl = 'https://json-service-823df.web.app/api/articles/3';
+String serviceUrl = 'https://json-service-823df.web.app/api/articles/';
 
 @override
 void initState(){
